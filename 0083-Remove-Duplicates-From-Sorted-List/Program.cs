@@ -10,12 +10,35 @@ namespace _0083_Remove_Duplicates_From_Sorted_List
             var l1 = LinkedListHelper.ConvertToListNodes(new int[] { 1, 1, 2, 3, 3 });
             var r = DeleteDuplicates(l1);
             LinkedListHelper.PrintListNodes(r);
+            Console.ReadKey();
         }
 
 
         public static ListNode DeleteDuplicates(ListNode head)
         {
-            return null;
+            ListNode current = head;
+            ListNode prev = null;
+            while (current != null)
+            {
+                if (prev == null)
+                {
+                    prev = current;
+                    current = current.next;
+                }
+                else
+                {
+                    if (prev.val == current.val)
+                    {
+                        prev.next = current.next;
+                    }
+                    else
+                    {
+                        prev = current;
+                    }
+                    current = current.next;
+                }
+            }
+            return head;
         }
     }
 }
