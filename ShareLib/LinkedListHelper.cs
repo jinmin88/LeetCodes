@@ -78,6 +78,22 @@ namespace ShareLib
             return head;
         }
 
+        public static Tuple<ListNode, ListNode> ConvertToIntersectionLinkedList (int[] part1, int[] part2, int[] partSame)
+        {
+            ListNode list1_head = ConvertToListNodes(part1);
+            ListNode list2_head = ConvertToListNodes(part2);
+            ListNode listSame_head = ConvertToListNodes(partSame);
+
+            ListNode list1_last = list1_head;
+            ListNode list2_last = list2_head;
+            while (list1_last.next != null) { list1_last = list1_last.next; }
+            while (list2_last.next != null) { list2_last = list2_last.next; }
+
+            list1_last.next = listSame_head;
+            list2_last.next = listSame_head;
+
+            return new Tuple<ListNode, ListNode>(list1_head, list2_head);
+        }
 
         public static void PrintListNodes(ListNode listNode)
         {

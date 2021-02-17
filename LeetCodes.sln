@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0141-Linked-List-Cycle", "0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Easy", "Easy", "{ACBFF43A-6303-4BB0-9578-65856742C260}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0160-Intersection-Of-Two-Linked-Lists", "0160-Intersection-Of-Two-Linked-Lists\0160-Intersection-Of-Two-Linked-Lists.csproj", "{46355770-F01A-43F1-A256-C207112E8FFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{69063302-848D-4AA0-B989-441367AD930D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69063302-848D-4AA0-B989-441367AD930D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69063302-848D-4AA0-B989-441367AD930D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46355770-F01A-43F1-A256-C207112E8FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46355770-F01A-43F1-A256-C207112E8FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46355770-F01A-43F1-A256-C207112E8FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46355770-F01A-43F1-A256-C207112E8FFC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{6069B1FD-2580-4742-A17D-50AD4C897E8D} = {ACBFF43A-6303-4BB0-9578-65856742C260}
 		{69063302-848D-4AA0-B989-441367AD930D} = {ACBFF43A-6303-4BB0-9578-65856742C260}
 		{ACBFF43A-6303-4BB0-9578-65856742C260} = {9B7E6B5C-BFA7-4BB6-A6FA-6F8238561E22}
+		{46355770-F01A-43F1-A256-C207112E8FFC} = {ACBFF43A-6303-4BB0-9578-65856742C260}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A4E86AA-6B40-4462-9F22-47086F9D00DF}
