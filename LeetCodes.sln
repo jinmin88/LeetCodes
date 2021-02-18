@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0876-Middle-of-the-Linked-L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1290-Convert-Binary-Number-in-a-Linked-List-to-Integer", "1290-Convert-Binary-Number-in-a-Linked-List-to-Integer\1290-Convert-Binary-Number-in-a-Linked-List-to-Integer.csproj", "{F526F109-DDFE-443B-9B39-9AF2AC069192}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Medium", "Medium", "{8F460CCC-EA37-47A5-98BE-84970E255F5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0002-Add-Two-Numbers", "0002-Add-Two-Numbers\0002-Add-Two-Numbers.csproj", "{B8FC7483-6F64-4B2E-8044-65E4F1DDDD12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +83,10 @@ Global
 		{F526F109-DDFE-443B-9B39-9AF2AC069192}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F526F109-DDFE-443B-9B39-9AF2AC069192}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F526F109-DDFE-443B-9B39-9AF2AC069192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8FC7483-6F64-4B2E-8044-65E4F1DDDD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8FC7483-6F64-4B2E-8044-65E4F1DDDD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8FC7483-6F64-4B2E-8044-65E4F1DDDD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8FC7483-6F64-4B2E-8044-65E4F1DDDD12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +103,8 @@ Global
 		{B2976718-DC9C-4F30-A416-0C5A5B56E324} = {ACBFF43A-6303-4BB0-9578-65856742C260}
 		{D7A514D7-89D3-4B03-A404-26B53372AE90} = {ACBFF43A-6303-4BB0-9578-65856742C260}
 		{F526F109-DDFE-443B-9B39-9AF2AC069192} = {ACBFF43A-6303-4BB0-9578-65856742C260}
+		{8F460CCC-EA37-47A5-98BE-84970E255F5F} = {9B7E6B5C-BFA7-4BB6-A6FA-6F8238561E22}
+		{B8FC7483-6F64-4B2E-8044-65E4F1DDDD12} = {8F460CCC-EA37-47A5-98BE-84970E255F5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A4E86AA-6B40-4462-9F22-47086F9D00DF}
