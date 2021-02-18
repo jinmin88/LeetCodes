@@ -5,17 +5,19 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LinkedList", "LinkedList", "{9B7E6B5C-BFA7-4BB6-A6FA-6F8238561E22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0021-Merge-Two-Sorted-List", "0021-Merge-Two-Sorted-List\0021-Merge-Two-Sorted-List.csproj", "{E6E8761E-1185-4BD0-9462-EAE1A3183312}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0021-Merge-Two-Sorted-List", "0021-Merge-Two-Sorted-List\0021-Merge-Two-Sorted-List.csproj", "{E6E8761E-1185-4BD0-9462-EAE1A3183312}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareLib", "ShareLib\ShareLib.csproj", "{6387A1C7-0AE9-4D3E-B579-D463C3C524EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareLib", "ShareLib\ShareLib.csproj", "{6387A1C7-0AE9-4D3E-B579-D463C3C524EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0083-Remove-Duplicates-From-Sorted-List", "0083-Remove-Duplicates-From-Sorted-List\0083-Remove-Duplicates-From-Sorted-List.csproj", "{6069B1FD-2580-4742-A17D-50AD4C897E8D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0083-Remove-Duplicates-From-Sorted-List", "0083-Remove-Duplicates-From-Sorted-List\0083-Remove-Duplicates-From-Sorted-List.csproj", "{6069B1FD-2580-4742-A17D-50AD4C897E8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0141-Linked-List-Cycle", "0141-Linked-List-Cycle\0141-Linked-List-Cycle.csproj", "{69063302-848D-4AA0-B989-441367AD930D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0141-Linked-List-Cycle", "0141-Linked-List-Cycle\0141-Linked-List-Cycle.csproj", "{69063302-848D-4AA0-B989-441367AD930D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Easy", "Easy", "{ACBFF43A-6303-4BB0-9578-65856742C260}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0160-Intersection-Of-Two-Linked-Lists", "0160-Intersection-Of-Two-Linked-Lists\0160-Intersection-Of-Two-Linked-Lists.csproj", "{46355770-F01A-43F1-A256-C207112E8FFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0160-Intersection-Of-Two-Linked-Lists", "0160-Intersection-Of-Two-Linked-Lists\0160-Intersection-Of-Two-Linked-Lists.csproj", "{46355770-F01A-43F1-A256-C207112E8FFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0203-Remove-Linked-List-Elements", "0203-Remove-Linked-List-Elements\0203-Remove-Linked-List-Elements.csproj", "{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{46355770-F01A-43F1-A256-C207112E8FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46355770-F01A-43F1-A256-C207112E8FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46355770-F01A-43F1-A256-C207112E8FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{69063302-848D-4AA0-B989-441367AD930D} = {ACBFF43A-6303-4BB0-9578-65856742C260}
 		{ACBFF43A-6303-4BB0-9578-65856742C260} = {9B7E6B5C-BFA7-4BB6-A6FA-6F8238561E22}
 		{46355770-F01A-43F1-A256-C207112E8FFC} = {ACBFF43A-6303-4BB0-9578-65856742C260}
+		{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8} = {ACBFF43A-6303-4BB0-9578-65856742C260}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A4E86AA-6B40-4462-9F22-47086F9D00DF}
