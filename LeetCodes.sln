@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0160-Intersection-Of-Two-Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0203-Remove-Linked-List-Elements", "0203-Remove-Linked-List-Elements\0203-Remove-Linked-List-Elements.csproj", "{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0206-Reverse-Linked-List", "0206-Reverse-Linked-List\0206-Reverse-Linked-List.csproj", "{97970BB7-F688-4CA4-A8F2-9938C13B66F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97970BB7-F688-4CA4-A8F2-9938C13B66F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97970BB7-F688-4CA4-A8F2-9938C13B66F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97970BB7-F688-4CA4-A8F2-9938C13B66F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97970BB7-F688-4CA4-A8F2-9938C13B66F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{ACBFF43A-6303-4BB0-9578-65856742C260} = {9B7E6B5C-BFA7-4BB6-A6FA-6F8238561E22}
 		{46355770-F01A-43F1-A256-C207112E8FFC} = {ACBFF43A-6303-4BB0-9578-65856742C260}
 		{C86A7299-BA1B-48C9-BB92-16DAD9B0EFF8} = {ACBFF43A-6303-4BB0-9578-65856742C260}
+		{97970BB7-F688-4CA4-A8F2-9938C13B66F9} = {ACBFF43A-6303-4BB0-9578-65856742C260}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A4E86AA-6B40-4462-9F22-47086F9D00DF}
