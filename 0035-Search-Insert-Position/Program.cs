@@ -33,42 +33,13 @@ namespace _0035_Search_Insert_Position
                     right = mid - 1;
                 }                
             }
-
+             
             if (target > nums[left])
                 return left + 1;
             else
                 return left;
         }
 
-        public int BinarySearch(int[] nums, int start, int end, int target)
-        {
-            if (start >= end)
-            {
-                if (nums[start] > target)
-                {
-                    return start + 1;
-                }
-                else
-                {
-                    return start;
-                }
-            }
-                
-            int mid = (end - start + 1) / 2;
-
-            if (nums[mid] == target)
-            {
-                return mid;
-            }
-            else if (target > nums[mid])
-            {
-                return BinarySearch(nums, mid + 1, end, target); 
-            }
-            else
-            {
-                return BinarySearch(nums, start, mid - 1, target);
-            }
-        }
 
     }
 }
