@@ -1,13 +1,13 @@
 ﻿using System;
 
-namespace HeapSort
+namespace HeapSortr
 {
     class Program
     {
         static void Main(string[] args)
         {
             int[] arr = new int[] { 4, 1, 3, 2, 16, 9, 10, 14, 8, 7 };
-            Solution sol = new Solution();
+            Solution2 sol = new Solution2();
             sol.HeapSort(arr);
 
             for (int i=0; i<arr.Length; i++)
@@ -46,6 +46,12 @@ namespace HeapSort
             }
         }
 
+        /// <summary>
+        /// 找出以i為root的Max heap
+        /// </summary>
+        /// <param name="arr"></param>
+        /// <param name="i"></param>
+        /// <param name="heapSize"></param>
         private void MaxHeapify(int[] arr, int i, int heapSize)
         {
             int l = Left(i);
@@ -90,4 +96,74 @@ namespace HeapSort
         }
 
     }
+
+    public class Solution2
+    {
+        public void HeapSort(int[] arr)
+        {
+            int heapSize = arr.Length;
+            BuildMaxHeap(arr, heapSize);
+            for (int i = arr.Length-1; i>=1; i--)
+            {
+                int temp = arr[0];
+                arr[0] = arr[i];
+                arr[i] = temp;
+                heapSize--;
+                MaxHeapify(arr, 0, heapSize);
+            }
+
+
+        }
+
+        public void BuildMaxHeap(int[] arr, int heapSize)
+        {
+            for (int i = ((heapSize + 1) / 2) + 1; i>=0; i--)
+            {
+                MaxHeapify(arr, i, heapSize);
+            }
+        }
+
+        private void MaxHeapify(int[] arr, int i, int heapSize)
+        {
+            int left = Left(i);
+            int right = Right(i);
+
+            int largestIndex;
+            if (left <= heapSize-1 && arr[left] > arr[i])
+            {
+                largestIndex = left;
+            }
+            else
+            {
+                largestIndex = i;
+            }
+            if (right <= heapSize - 1 && arr[right] > arr[largestIndex])
+            {
+                largestIndex = right;
+            }
+            if (largestIndex != i)
+            {
+                var temp = arr[i];
+                arr[i] = arr[largestIndex];
+                arr[largestIndex] = temp;
+                MaxHeapify(arr, largestIndex, heapSize);
+            }
+        }
+
+        public int Parent(int i)
+        {
+            return (i - 1) / 2;
+        }
+
+        public int Left(int i)
+        {
+            return 2 * i + 1;
+        }
+
+        public int Right(int i)
+        {
+            return 2 * i + 2;
+        }
+    }
+
 }
