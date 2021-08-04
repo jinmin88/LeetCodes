@@ -7,7 +7,7 @@ namespace MergeSort
         static void Main(string[] args)
         {
             int[] arr = new int[] { 4, 1, 3, 2, 16, 9, 10, 14, 8, 7 };
-            Solution sol = new Solution();
+            Solution2 sol = new Solution2();
             sol.MergeSort_Recursive(arr);
 
             for (int i = 0; i < arr.Length; i++)
@@ -92,4 +92,69 @@ namespace MergeSort
             }
         }
     }
+
+
+    public class Solution2
+    {
+
+        public void MergeSort_Recursive(int[] arr)
+        {
+            int[] temp = new int[arr.Length];
+            MergeSort(arr, temp, 0, arr.Length - 1);
+        }
+
+        public void MergeSort(int[] arr, int[] temp, int start, int end)
+        {
+            if (start >= end)
+                return;
+
+            int mid = start + (end - start) / 2;
+            int start1 = start; int end1 = mid;
+            int start2 = mid + 1; int end2 = end;
+            MergeSort(arr, temp, start1, end1);
+            MergeSort(arr, temp, start2, end2);
+
+            int k = start;
+            while (start1 <= end1 && start2 <= end2)
+            {
+                if (arr[start1] < arr[start2])
+                {
+                    temp[k] = arr[start1];
+                    start1++;
+                }
+                else
+                {
+                    temp[k] = arr[start2];
+                    start2++;
+                }
+                k++;
+            }
+
+            while (start1 <= end1)
+            {
+                temp[k] = arr[start1];
+                start1++;
+                k++;
+            }
+
+            while (start2 <= end2)
+            {
+                temp[k] = arr[start2];
+                start2++;
+                k++;
+            }
+
+            //copy array to arr
+            for (int i=start; i<= end;  i++)
+            {
+                arr[i] = temp[i];
+            }
+            return;
+        }
+
+
+
+    }
+
+
 }
