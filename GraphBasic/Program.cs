@@ -23,33 +23,60 @@ namespace GraphBasic
                 new Tuple<int, int>(9, 10)
             };
             var graph = new Graph<int>(vertices, edges);
-            DFS(graph, 1);
+            var result1 = DFS_With_Stack(graph, 1);
+            foreach (var item in result1)
+            {
+                Console.Write($"{item} ");
+            }
+
+
+
+            Console.WriteLine();
             Console.ReadKey();
         }
 
-        private static void DFS(Graph<int> graph, int start)
+        private static List<int> DFS_With_Stack(Graph<int> graph, int start)
         {
+            var result = new List<int>();
             var visited = new HashSet<int>();
 
+            //假設graph不存在start這個點，直接回傳空的結果
             if (!graph.AdjancyList.ContainsKey(start))
-                return;
+                return result;
 
             var stack = new Stack<int>();
             stack.Push(start);
             while (stack.Count > 0)
             {
                 var vertex = stack.Pop();
-
-                if (visited.Contains(vertex))
-                    Console.Write(vertex + "->");                                                                                                                                                                                                                                                                       )
-
-               
-
+                if (visited.Contains(vertex) == false)
+                {
+                    result.Add(vertex);
+                    visited.Add(vertex);
+                    var edges = graph.AdjancyList[vertex];
+                    foreach (var edge in edges)
+                    {
+                        if (!visited.Contains(edge))
+                            stack.Push(edge);
+                    }
+                }
             }
-            LinkedList<int> aa = new LinkedList<int>();
-            
+            return result;
+        }
+
+        private static List<int> DFS(Graph<int> graph, int start, HashSet<int> visited)
+        {
+            List<int> result = new List<int>();
+
+            if (visited.Contains(start) == false)
+            {
+                result.Add(start);
+                visited.Add(start);
+                foreach (var neibor in graph.AdjancyList[start])
+            }
 
         }
+
     }
 
 
