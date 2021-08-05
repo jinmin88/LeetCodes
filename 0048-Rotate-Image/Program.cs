@@ -38,6 +38,33 @@ namespace _0048_Rotate_Image
         }
     }
 
+    public class Solution2
+    {
+        public void Rotate(int[][] m)
+        {
+            int n = m.Length;
+            for (int i = 0; i < n / 2; i++)
+            {
+                for (int j = 0; j < (n + 1) / 2; j++)
+                {
+                    //m[0][0] -> m[0][4]
+                    //m[0][1] -> m[1][4]
+                    //m[0][2] -> m[2][4]
+                    //m[1][0] -> m[0][3]
+                    //m[1][1] -> m[1][3]
+                    //m[1][2] -> m[2][3]
+
+                    //m[0][4] = m[0][0]
+                    //m[0][0] = m[0][4]
+                    //m[4][0] = m[0][0]
+
+                    
+
+                }
+            }
+        }
+    }
+
 
     public class Solution
     {
@@ -49,11 +76,19 @@ namespace _0048_Rotate_Image
             {
                 for (int j=0; j < (n+1) / 2; j++)
                 {
+                    int temp = m[i, j];
+                    m[i, j] = m[j, n - i - 1];
+                    m[j, n - i - 1] = m[n - i - 1, n - j - 1];
+                    m[n - i - 1, n - j - 1] = m[n - j - 1, i];
+                    m[n - j - 1, i] = temp;
+
+                    /*
                     int temp = m[n - j - 1, i];
                     m[n - j - 1, i] = m[n - i - 1, n - j - 1];
                     m[n - i - 1, n - j - 1] = m[j, n - i - 1];
                     m[j, n - i - 1] = m[i, j];
                     m[i, j] = temp;
+                    */
                 }
             }
 

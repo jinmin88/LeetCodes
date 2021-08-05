@@ -3,7 +3,11 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>_0547_Number_Of_Provinces</RootNamespace>
+    <RootNamespace>_0133_Clone_Graph</RootNamespace>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ShareLib\ShareLib.csproj" />
+  </ItemGroup>
 
 </Project>
