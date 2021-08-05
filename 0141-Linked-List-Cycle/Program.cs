@@ -10,14 +10,36 @@ namespace _0141_Linked_List_Cycle
             var l1 = LinkedListHelper.ConvertToListNodesWithCycle(new int[] { 3, 2, 0, -4 }, 1);
             var l2 = LinkedListHelper.ConvertToListNodesWithCycle(new int[] { 1, 2 }, 0);
             var l3 = LinkedListHelper.ConvertToListNodes(new int[] { 1 });
-            bool ll1 = HasCycle(l1);
-            bool ll2 = HasCycle(l2);
-            bool ll3 = HasCycle(l3);
+            bool ll1 = HasCycle_v2(l1);
+            bool ll2 = HasCycle_v2(l2);
+            bool ll3 = HasCycle_v2(l3);
             Console.WriteLine($"l1 has cycle :{ll1}");
             Console.WriteLine($"l2 has cycle :{ll2}");
             Console.WriteLine($"l3 has cycle :{ll3}");
             Console.ReadKey();
         }
+
+        public static bool HasCycle_v2(ListNode head)
+        {
+            var slow = head;
+            var fast = head;
+
+            while (slow != null && fast != null)
+            {
+                if (fast.next == null)
+                    return false;
+
+                slow = slow.next;
+                fast = fast.next.next;
+                if (slow == fast)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
 
         public static bool HasCycle(ListNode head)
         {

@@ -8,10 +8,41 @@ namespace _0083_Remove_Duplicates_From_Sorted_List
         static void Main(string[] args)
         {
             var l1 = LinkedListHelper.ConvertToListNodes(new int[] { 1, 1, 2, 3, 3 });
-            var r = DeleteDuplicates(l1);
+            var r = DeleteDuplicates_v2(l1);
             LinkedListHelper.PrintListNodes(r);
             Console.ReadKey();
         }
+
+        public static ListNode DeleteDuplicates_v2(ListNode head)
+        {
+            ListNode curr = head;
+            ListNode prev = null;
+            while (curr != null)
+            {
+                if (prev != null)
+                {
+                    if (prev.val == curr.val)
+                    {
+                        prev.next = curr.next;
+                        curr = curr.next;
+                    }
+                    else
+                    {
+                        prev = curr;
+                        curr = curr.next;
+                    }
+                }
+                else
+                {
+                    prev = curr;
+                    curr = curr.next;
+                }
+            }
+            return head;
+        }
+
+
+
 
 
         public static ListNode DeleteDuplicates(ListNode head)

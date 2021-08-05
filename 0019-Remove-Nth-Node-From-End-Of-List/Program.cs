@@ -8,9 +8,50 @@ namespace _0019_Remove_Nth_Node_From_End_Of_List
         static void Main(string[] args)
         {
             var l1 = LinkedListHelper.ConvertToListNodes(new int[] { 1, 2, 3, 4, 5 });
-            var l2 = RemoveNthFromEnd_v2(l1, 2);
-            LinkedListHelper.PrintListNodes(l2);
+            var l3 = RemoveNthFromEnd_v3(l1, 2);
+            LinkedListHelper.PrintListNodes(l3);
             Console.ReadKey();
+        }
+
+        public static ListNode RemoveNthFromEnd_v3(ListNode head, int n)
+        {
+            int len = 0;
+            ListNode curr = head;
+            ListNode prev = null;
+
+            //先跑一次取得list長度
+            while (curr != null)
+            {
+                len++;
+                curr = curr.next;
+            }
+
+            curr = head;
+            int cnt = 1;
+            while (curr != null)
+            {
+                if (cnt == len - n + 1)
+                {
+                    //檢查是否是開頭
+                    if (prev == null)
+                    {
+                        curr = curr.next;
+                        head = curr;
+                    }
+                    else
+                    {
+                        prev.next = curr.next;
+                        curr = curr.next;
+                    }
+                }
+                else
+                {
+                    prev = curr;
+                    curr = curr.next;
+                }
+                cnt++;
+            }
+            return head;
         }
 
         public static ListNode RemoveNthFromEnd_v2(ListNode head, int n)
