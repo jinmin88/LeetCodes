@@ -143,13 +143,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1143-Longest-Common-Subsequ
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Graph", "Graph", "{8931ECD4-1D27-4814-A60A-2AF87B454468}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0547-Number-Of-Provinces", "0547-Number-Of-Provinces\0547-Number-Of-Provinces.csproj", "{0F182A29-55A9-496F-800B-184F38E94681}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0547-Number-Of-Provinces", "0547-Number-Of-Provinces\0547-Number-Of-Provinces.csproj", "{0F182A29-55A9-496F-800B-184F38E94681}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0133-Clone-Graph", "0133-Clone-Graph\0133-Clone-Graph.csproj", "{7CDA7D14-327D-457F-91F2-220A3BCBBF29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0133-Clone-Graph", "0133-Clone-Graph\0133-Clone-Graph.csproj", "{7CDA7D14-327D-457F-91F2-220A3BCBBF29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0102-Binary-Tree-Level-Order-Traversal", "0102-Binary-Tree-Level-Order-Traversal\0102-Binary-Tree-Level-Order-Traversal.csproj", "{A8439026-7CCF-44C1-9246-8D5F024C842C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0102-Binary-Tree-Level-Order-Traversal", "0102-Binary-Tree-Level-Order-Traversal\0102-Binary-Tree-Level-Order-Traversal.csproj", "{A8439026-7CCF-44C1-9246-8D5F024C842C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0107-Binary-Tree-Level-Order-Traversal-II", "0107-Binary-Tree-Level-Order-Traversal-II\0107-Binary-Tree-Level-Order-Traversal-II.csproj", "{38C78DF0-547A-465F-AA30-7E816B834C86}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0107-Binary-Tree-Level-Order-Traversal-II", "0107-Binary-Tree-Level-Order-Traversal-II\0107-Binary-Tree-Level-Order-Traversal-II.csproj", "{38C78DF0-547A-465F-AA30-7E816B834C86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0099-Recover-Binary-Search-Tree", "0099-Recover-Binary-Search-Tree\0099-Recover-Binary-Search-Tree.csproj", "{5E9B0690-895D-405C-B605-98614EB0EDB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0113-Path-Sum-II", "0113-Path-Sum-II\0113-Path-Sum-II.csproj", "{E325FC30-C81C-484F-A49F-3034C4430EAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Challenge2021", "Challenge2021", "{A327DBB1-0489-4C48-B930-E0903082985F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stone-Game", "Stone-Game\Stone-Game.csproj", "{D5E8CB34-06BC-48B6-945A-7D258C02ECDD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -413,6 +421,18 @@ Global
 		{38C78DF0-547A-465F-AA30-7E816B834C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38C78DF0-547A-465F-AA30-7E816B834C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38C78DF0-547A-465F-AA30-7E816B834C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E9B0690-895D-405C-B605-98614EB0EDB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9B0690-895D-405C-B605-98614EB0EDB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9B0690-895D-405C-B605-98614EB0EDB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9B0690-895D-405C-B605-98614EB0EDB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E325FC30-C81C-484F-A49F-3034C4430EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E325FC30-C81C-484F-A49F-3034C4430EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E325FC30-C81C-484F-A49F-3034C4430EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E325FC30-C81C-484F-A49F-3034C4430EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5E8CB34-06BC-48B6-945A-7D258C02ECDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5E8CB34-06BC-48B6-945A-7D258C02ECDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5E8CB34-06BC-48B6-945A-7D258C02ECDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5E8CB34-06BC-48B6-945A-7D258C02ECDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -481,6 +501,9 @@ Global
 		{7CDA7D14-327D-457F-91F2-220A3BCBBF29} = {8931ECD4-1D27-4814-A60A-2AF87B454468}
 		{A8439026-7CCF-44C1-9246-8D5F024C842C} = {613FF8CD-3E56-4C03-B9E7-67A84B2DADCF}
 		{38C78DF0-547A-465F-AA30-7E816B834C86} = {613FF8CD-3E56-4C03-B9E7-67A84B2DADCF}
+		{5E9B0690-895D-405C-B605-98614EB0EDB3} = {613FF8CD-3E56-4C03-B9E7-67A84B2DADCF}
+		{E325FC30-C81C-484F-A49F-3034C4430EAB} = {613FF8CD-3E56-4C03-B9E7-67A84B2DADCF}
+		{D5E8CB34-06BC-48B6-945A-7D258C02ECDD} = {A327DBB1-0489-4C48-B930-E0903082985F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A4E86AA-6B40-4462-9F22-47086F9D00DF}
