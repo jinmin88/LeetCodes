@@ -155,6 +155,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backtracking", "Backtrackin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0046-Permutations", "0046-Permutations\0046-Permutations.csproj", "{B612F7A3-714D-40BC-9D48-E063841324AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "N-ary-Tree-Level-Order-Traversal", "N-ary-Tree-Level-Order-Traversal\N-ary-Tree-Level-Order-Traversal.csproj", "{085DC1B2-44C1-4B82-B978-810CCCA84AE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -421,6 +423,10 @@ Global
 		{B612F7A3-714D-40BC-9D48-E063841324AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B612F7A3-714D-40BC-9D48-E063841324AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B612F7A3-714D-40BC-9D48-E063841324AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{085DC1B2-44C1-4B82-B978-810CCCA84AE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{085DC1B2-44C1-4B82-B978-810CCCA84AE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{085DC1B2-44C1-4B82-B978-810CCCA84AE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{085DC1B2-44C1-4B82-B978-810CCCA84AE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -490,6 +496,7 @@ Global
 		{A8439026-7CCF-44C1-9246-8D5F024C842C} = {613FF8CD-3E56-4C03-B9E7-67A84B2DADCF}
 		{38C78DF0-547A-465F-AA30-7E816B834C86} = {613FF8CD-3E56-4C03-B9E7-67A84B2DADCF}
 		{B612F7A3-714D-40BC-9D48-E063841324AE} = {41560E14-F693-46D6-93CF-ECBC58BEC999}
+		{085DC1B2-44C1-4B82-B978-810CCCA84AE2} = {613FF8CD-3E56-4C03-B9E7-67A84B2DADCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A4E86AA-6B40-4462-9F22-47086F9D00DF}
