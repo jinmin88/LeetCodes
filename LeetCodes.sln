@@ -165,6 +165,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0096-Unique-Binary-Search-T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindrome-Partition-II", "Palindrome-Partition-II\Palindrome-Partition-II.csproj", "{834B4F31-8F5B-4883-9B21-A309B3540C15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0039-Combination-Sum", "0039-Combination-Sum\0039-Combination-Sum.csproj", "{79EBA74C-08F5-4370-96A2-304A75E0B6F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rank-Transform-of-A-Matrix", "Rank-Transform-of-A-Matrix\Rank-Transform-of-A-Matrix.csproj", "{19E94549-03B3-4E5A-87EB-DD970A8B710C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -451,6 +455,14 @@ Global
 		{834B4F31-8F5B-4883-9B21-A309B3540C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{834B4F31-8F5B-4883-9B21-A309B3540C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{834B4F31-8F5B-4883-9B21-A309B3540C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79EBA74C-08F5-4370-96A2-304A75E0B6F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79EBA74C-08F5-4370-96A2-304A75E0B6F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79EBA74C-08F5-4370-96A2-304A75E0B6F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79EBA74C-08F5-4370-96A2-304A75E0B6F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19E94549-03B3-4E5A-87EB-DD970A8B710C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19E94549-03B3-4E5A-87EB-DD970A8B710C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19E94549-03B3-4E5A-87EB-DD970A8B710C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19E94549-03B3-4E5A-87EB-DD970A8B710C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -525,6 +537,8 @@ Global
 		{7B6CC663-B4E6-48C6-B2EB-B7EC124B8B40} = {613FF8CD-3E56-4C03-B9E7-67A84B2DADCF}
 		{64BA724C-A258-4964-9724-3C9631BBCF1F} = {613FF8CD-3E56-4C03-B9E7-67A84B2DADCF}
 		{834B4F31-8F5B-4883-9B21-A309B3540C15} = {A5E3A72D-A086-4263-97AC-2BCF500C9726}
+		{79EBA74C-08F5-4370-96A2-304A75E0B6F6} = {A5E3A72D-A086-4263-97AC-2BCF500C9726}
+		{19E94549-03B3-4E5A-87EB-DD970A8B710C} = {E91E2834-62EE-4ACB-8C0B-B84B67CA0785}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A4E86AA-6B40-4462-9F22-47086F9D00DF}
