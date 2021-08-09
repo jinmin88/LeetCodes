@@ -47,38 +47,6 @@ namespace Rank_Transform_of_A_Matrix
     {
         public int[][] MatrixRankTransform(int[][] matrix)
         {
-            var map = new Dictionary<int, List<List<Tuple<int, int>>>>();
-            for (int y = 0; y < matrix.Length; y++)
-            {
-                for (int x = 0; x < matrix[y].Length; x++)
-                {
-                    if (!map.ContainsKey(matrix[x][y]))
-                    {
-                        map.Add(matrix[x][y], new List<List<Tuple<int, int>>>() { new List<Tuple<int, int>> { new Tuple<int, int>(x, y) } });
-                    }
-                    else
-                    {
-                        List<List<Tuple<int, int>>> sourceTuples = map[matrix[x][y]];
-                        while (true)
-                        {
-                            var newTuple = new Tuple<int, int>(x, y);
-
-                            foreach (var inner_list in sourceTuples)
-                            {
-                                if (inner_list.Any(a => a.Item1 == x || a.Item2 == y))
-                                {
-                                    inner_list.Add(new )
-                                }
-                            }
-
-
-                        }
-
-                    }
-                }
-            }
-
-
             var dict = new Dictionary<int, List<Tuple<int, int>>>();
             for (int row=0; row < matrix.Length; row++)
             {
@@ -253,58 +221,5 @@ namespace Rank_Transform_of_A_Matrix
             return currentMax;
         }
 
-
-        private List<List<Tuple<int, int>>> UnionElement(List<List<Tuple<int, int>>> set)
-        {
-            HashSet<int> x_set = new HashSet<int>();
-            HashSet<int> y_set = new HashSet<int>();
-            int orig_x_count = 0;
-            int orig_y_count = 0;
-            while (true)
-            {
-                orig_x_count = x_set.Count;
-                orig_y_count = y_set.Count;
-                foreach (var inner_set in set)
-                {
-                    foreach (var tuple in inner_set)
-                    {
-                        if (orig_x_count == 0 && orig_y_count == 0)
-                        {
-                            x_set.Add(tuple.Item1);
-                            y_set.Add(tuple.Item2);
-                        }
-                        else
-                        {
-                            if (x_set.Contains(tuple.Item1))
-                            {
-                                y_set.Add(tuple.Item2);
-                            }
-                            if (y_set.Contains(tuple.Item2))
-                            {
-                                x_set.Add(tuple.Item1);
-                            }
-                        }
-                    }
-                }
-                if (orig_x_count == x_set.Count && orig_y_count == y_set.Count)
-                {
-                    break;
-                }
-            }
-
-            List<List<Tuple<int, int>>> result = new List<List<Tuple<int, int>>>();
-            foreach (var inner_set in set)
-            {
-                foreach (var tuple in inner_set)
-                {
-                    if (x_set.Contains(tuple.Item1) && y_set.Contains(tuple.Item2))
-                    {
-
-                    }
-                }
-            }
-
-
-        }
     }
 }
