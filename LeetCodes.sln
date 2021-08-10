@@ -157,6 +157,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Add-Strings", "Add-Strings\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0242-Valid-Anagram", "0242-Valid-Anagram\0242-Valid-Anagram.csproj", "{310ACA6C-A875-4651-A940-390DAA49F577}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0023-Merge-k-Sorted-Lists", "0023-Merge-k-Sorted-Lists\0023-Merge-k-Sorted-Lists.csproj", "{E9FF42F9-8103-4733-9F7E-E1A811AD5416}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -459,6 +461,10 @@ Global
 		{310ACA6C-A875-4651-A940-390DAA49F577}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{310ACA6C-A875-4651-A940-390DAA49F577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{310ACA6C-A875-4651-A940-390DAA49F577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9FF42F9-8103-4733-9F7E-E1A811AD5416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9FF42F9-8103-4733-9F7E-E1A811AD5416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9FF42F9-8103-4733-9F7E-E1A811AD5416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9FF42F9-8103-4733-9F7E-E1A811AD5416}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -537,6 +543,7 @@ Global
 		{19E94549-03B3-4E5A-87EB-DD970A8B710C} = {1BD6BF99-0601-4EF8-9121-E1F2D1ED9713}
 		{8D131A07-1EEF-46BB-A327-FD5E8F7F0F7E} = {1BD6BF99-0601-4EF8-9121-E1F2D1ED9713}
 		{310ACA6C-A875-4651-A940-390DAA49F577} = {1BD6BF99-0601-4EF8-9121-E1F2D1ED9713}
+		{E9FF42F9-8103-4733-9F7E-E1A811AD5416} = {1BD6BF99-0601-4EF8-9121-E1F2D1ED9713}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A4E86AA-6B40-4462-9F22-47086F9D00DF}
