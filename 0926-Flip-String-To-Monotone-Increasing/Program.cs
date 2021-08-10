@@ -19,31 +19,41 @@ namespace _0926_Flip_String_To_Monotone_Increasing
         public int MinFlipsMonoIncr(string s)
         {
             /*
-            if s[i] == '0'
-                dp[i][0] = dp[i-1][0];
-                dp[i][1] = min(dp[i-1][0], dp[i-1][1]) + 1;
-            else s[i] == '1'
-                dp[i][0] = dp[i-1][0] + 1;
-                dp[i][1] = min(dp[i-1][0], dp[i-1][1])
-        
+            dp0[0...n] = [0,0,0,...,0]
+            dp1[0...n] = [0,0,0,...,0]
+
+            if (s[i] == '0') {
+                //目前是0
+                dp1[i] = dp1[i-1] + 1;
+            }
+            else {
+                //目前是1
+                dp0[i] = dp0[i-1] + 1;
+            }
             */
-
-
-
-
-
-            for (int i=0; i<s.Length; i++)
+            int len = s.Length;
+            int[] dp0 = new int[len + 1];
+            int[] dp1 = new int[len + 1];
+            for (int i=0; i<len+1; i++)
             {
-                if (s[i] == '1')
-                {
+                dp0[i] = 0;
+                dp1[i] = 0;
+            }
 
+            for (int i=0; i<len; i++)
+            {
+                if (s[i] == '0')
+                {
+                    dp1[i + 1] = i == 0 ? 0 : dp1[i] + 1;
                 }
                 else
                 {
-
+                    dp0[i + 1] = i == 0 ? 0 : dp0[i] + 1;
                 }
             }
 
+
+            return Math.Min(dp0[len], dp1[len]);
         }
     }
 }
