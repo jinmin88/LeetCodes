@@ -20,6 +20,10 @@ namespace _0096_Unique_Binary_Search_Trees
             // dp[3] = dp[0]*dp[2] + dp[1]*dp[1] + dp[2]*dp[0]=2+1+2=5
             // dp[i] = dp[0]*dp[n-1] + dp[1]*dp[n-2] + ... + dp[n-1]*dp[0]
 
+            // dp[0] = 1;
+            // dp[1] = 1;
+            // dp[i] = dp[0]*dp[i-1] + dp[1]*dp[n-2]
+
             int[] arr = new int[n + 1];
             arr[0] = 1;
             arr[1] = 1;
