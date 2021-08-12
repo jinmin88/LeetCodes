@@ -163,8 +163,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0018-4-Sum", "0018-4-Sum\00
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0954-Array-of-Doubled-Pairs", "0954-Array-of-Doubled-Pairs\0954-Array-of-Doubled-Pairs.csproj", "{F7EAAADA-6063-4FB7-800B-4006AA1CDF18}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0200-Number-of-Islands", "0200-Number-of-Islands\0200-Number-of-Islands.csproj", "{4C4DBB01-3B46-465B-ADC6-559E81DA9123}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -479,10 +477,6 @@ Global
 		{F7EAAADA-6063-4FB7-800B-4006AA1CDF18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7EAAADA-6063-4FB7-800B-4006AA1CDF18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7EAAADA-6063-4FB7-800B-4006AA1CDF18}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C4DBB01-3B46-465B-ADC6-559E81DA9123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C4DBB01-3B46-465B-ADC6-559E81DA9123}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C4DBB01-3B46-465B-ADC6-559E81DA9123}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C4DBB01-3B46-465B-ADC6-559E81DA9123}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -564,7 +558,6 @@ Global
 		{99AB0496-23D2-44E8-928B-2B8FA9F631A5} = {1BD6BF99-0601-4EF8-9121-E1F2D1ED9713}
 		{44E8596F-3FE2-4946-8E0A-8D3F05525E87} = {1BD6BF99-0601-4EF8-9121-E1F2D1ED9713}
 		{F7EAAADA-6063-4FB7-800B-4006AA1CDF18} = {1BD6BF99-0601-4EF8-9121-E1F2D1ED9713}
-		{4C4DBB01-3B46-465B-ADC6-559E81DA9123} = {1BD6BF99-0601-4EF8-9121-E1F2D1ED9713}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2A4E86AA-6B40-4462-9F22-47086F9D00DF}
