@@ -26,6 +26,56 @@ namespace _0046_Permutations
         }
     }
 
+    public class Solution2
+    {
+        public IList<IList<int>> Permute(int[] nums)
+        {
+            IList<IList<int>> permutations = new List<IList<int>>();
+            if (nums.Length == 0) return permutations;
+            bool[] visited = new bool[nums.Length];
+            for (int i=0; i<visited.Length; i++)
+            {
+                visited[i] = false;
+            }
+
+            return permutations;
+        }
+
+
+        private void Backtracking(IList<IList<int>> permutations, IList<int> curr, bool[] visited, int[] nums)
+        {
+            if (curr.Count == nums.Length)
+            {
+                //curr代表此次排類的組合
+                var cloneList = new List<int>();
+                foreach (var item in curr)
+                {
+                    cloneList.Add(item);
+                }
+                permutations.Add(cloneList);
+                return;
+            }
+
+            for (int i = 0; i<nums.Length; i++)
+            {
+                if (visited[i] == false)
+                {
+                    //使用nums[i]為字首開始排列
+                    visited[i] = true;
+                    curr.Add(nums[i]);
+
+                    //用nums[i]開始，排列剩下的組合
+                    Backtracking(permutations, curr, visited, nums);
+                    
+                    //出來之後，之前使用curr的組合已經排列完成，重新整理下一次的組合
+                    visited[i] = false;
+                    curr.RemoveAt(curr.Count - 1);
+                }
+            }
+        }
+
+    }
+
     public class Solution
     {
         public IList<IList<int>> Permute(int[] nums)
