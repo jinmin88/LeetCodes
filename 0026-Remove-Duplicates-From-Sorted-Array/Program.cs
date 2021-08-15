@@ -6,7 +6,7 @@ namespace _0026_Remove_Duplicates_From_Sorted_Array
     {
         static void Main(string[] args)
         {
-            Solution sol = new Solution();
+            Solution2 sol = new Solution2();
             int[] arr = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
             int k = sol.RemoveDuplicates(arr);
             Console.WriteLine("k=" + k);
@@ -18,6 +18,34 @@ namespace _0026_Remove_Duplicates_From_Sorted_Array
             Console.ReadKey();
         }
     }
+
+
+    public class Solution2
+    {
+        public int RemoveDuplicates(int[] nums)
+        {
+            if (nums.Length <= 1) return nums.Length;
+
+            int curr_idx = 0;
+            for (int i=1; i<nums.Length; i++)
+            {
+                if (nums[i] == nums[curr_idx])
+                {
+                    continue;
+                }
+                else
+                {
+                    curr_idx++;
+                    nums[curr_idx] = nums[i];
+                }
+            }
+
+            return curr_idx + 1;
+        }
+    }
+
+
+
 
     public class Solution
     {

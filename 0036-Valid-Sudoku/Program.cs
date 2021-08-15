@@ -62,7 +62,7 @@ namespace _0036_Valid_Sudoku
                     }
                 }
             }
-
+            //3. 檢查所有的九宮格
             for (int i=0; i<3; i++)
             {
                 for (int j=0; j<3; j++)

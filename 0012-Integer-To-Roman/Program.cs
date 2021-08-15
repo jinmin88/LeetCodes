@@ -8,7 +8,7 @@ namespace _0012_Integer_To_Roman
         static void Main(string[] args)
         {
             Solution sol = new Solution();
-            Console.WriteLine("test 1994=" + sol.IntToRoman(1994));
+            Console.WriteLine("test 1994=" + sol.IntToRoman(3994));
             Console.ReadKey();
         }
     }

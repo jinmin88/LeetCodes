@@ -22,6 +22,29 @@ namespace _0240_Search_a_2D_Matrix_II
         }
     }
 
+    public class Solution2
+    {
+        public bool SearchMatrix(int[][] matrix, int target)
+        {
+            int rows = matrix.Length;
+            int cols = matrix[0].Length;
+
+
+            int i = rows - 1, j = 0;
+            while (i >= 0 && j <= cols-1)
+            {
+                if (target > matrix[i][j])
+                    j++;
+                else if (target < matrix[i][j])
+                    i--;
+                else
+                    return true;
+            }
+            return false;
+
+        }
+    }
+
     public class Solution
     {
         public bool SearchMatrix(int[][] matrix, int target)

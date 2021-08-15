@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\0002-Add-Two-Numbers\0002-Add-Two-Numbers.csproj" />
     <ProjectReference Include="..\ShareLib\ShareLib.csproj" />
   </ItemGroup>
 

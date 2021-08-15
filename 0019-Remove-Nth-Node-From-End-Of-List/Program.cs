@@ -8,9 +8,47 @@ namespace _0019_Remove_Nth_Node_From_End_Of_List
         static void Main(string[] args)
         {
             var l1 = LinkedListHelper.ConvertToListNodes(new int[] { 1, 2, 3, 4, 5 });
-            var l3 = RemoveNthFromEnd_v3(l1, 2);
+            var l3 = RemoveNthFromEnd_v4(l1, 1);
             LinkedListHelper.PrintListNodes(l3);
             Console.ReadKey();
+        }
+
+        public static ListNode RemoveNthFromEnd_v4(ListNode head, int n)
+        {
+            ListNode curr = head;
+            int len = 0;
+            while (curr != null)
+            {
+                len++;
+                curr = curr.next;
+            }
+
+            ListNode prev = null;
+            curr = head;
+            int cnt = len;
+            while (curr != null)
+            {
+                if (cnt == n)
+                {
+                    if (prev == null)
+                    {
+                        curr = curr.next;
+                        head = curr;
+                    }
+                    else
+                    {
+                        curr = curr.next;
+                        prev.next = curr;
+                    }
+                    break;
+                }
+
+                prev = curr;
+                curr = curr.next;
+                cnt--;
+            }
+
+            return head;
         }
 
         public static ListNode RemoveNthFromEnd_v3(ListNode head, int n)

@@ -8,8 +8,8 @@ namespace _0022_Generate_Parentheses
     {
         static void Main(string[] args)
         {
-            Solution sol = new Solution();
-            var result = sol.GenerateOarenthesis(3);
+            Solution2 sol = new Solution2();
+            var result = sol.GenerateParenthesis(3);
 
             foreach (var item in result)
             {
@@ -20,6 +20,42 @@ namespace _0022_Generate_Parentheses
             
         }
     }
+
+    public class Solution2
+    {
+        public IList<string> GenerateParenthesis(int n)
+        {
+            // ((()))
+            IList<string> arr = new List<string>();
+            Backtracking(arr, new StringBuilder(), 0, 0, n);
+            return arr;
+        }
+        
+        public void Backtracking(IList<string> ans, StringBuilder curr, int l, int r, int n)
+        {
+            if (curr.Length == n * 2)
+            {
+                ans.Add(curr.ToString());
+                return;
+            }
+
+            if (l < n)
+            {
+                curr.Append("(");
+                Backtracking(ans, curr, l + 1, r, n);
+                curr.Remove(curr.Length - 1, 1);
+            }
+
+            if (r < l)
+            {
+                curr.Append(")");
+                Backtracking(ans, curr, l, r + 1, n);
+                curr.Remove(curr.Length - 1, 1);
+            }
+        }
+
+    }
+
 
     public class Solution
     {

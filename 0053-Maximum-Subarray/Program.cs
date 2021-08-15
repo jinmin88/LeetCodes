@@ -16,24 +16,37 @@ namespace _0053_Maximum_Subarray
 
     public class Solution
     {
-        public int MaxSubArray(int[] nums)
+        /// <summary>
+        /// 思路：
+        /// dp[1] = nums[1];
+        /// dp[2] = Max(nums[2], dp[1] + nums[2])
+        /// ...
+        /// dp[i] = Max(nums[i], dp[i-1] + nums[i])
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        /// 
+        public int MaxSubArray (int[] nums)
         {
             int max = int.MinValue;
-            int[] table = new int[nums.Length];
+            int[] dp = new int[nums.Length];
             for (int i=0; i<nums.Length; i++)
             {
                 if (i == 0)
-                {
-                    table[i] = nums[i];
-                }
+                    dp[0] = nums[0];
                 else
                 {
-                    table[i] = Math.Max(nums[i], table[i - 1] + nums[i]);
+                    dp[i] = Math.Max(nums[i], dp[i - 1] + nums[i]);
                 }
-                max = Math.Max(max, table[i]);
-            }
 
+                if (dp[i] > max)
+                {
+                    max = dp[i];
+                }
+            }
             return max;
+
+
         }
 
     }

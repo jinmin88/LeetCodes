@@ -29,7 +29,7 @@ namespace _0047_Permutation_II
         {
             IList<IList<int>> permutations = new List<IList<int>>();
             bool[] visited = new bool[nums.Length];
-            Array.Sort(nums);
+             
             Backtracking(permutations, new List<int>(), visited, nums);
             return permutations;
         }
@@ -44,6 +44,8 @@ namespace _0047_Permutation_II
                 return;
             }
 
+
+            //當跑第二輪相同元素時，因為前面第一輪已經跑過並且已經清成false, 所以當前面為false時，不處理
             for (int i = 0; i < nums.Length; i++)
             {
                 if (visited[i] == true) continue;

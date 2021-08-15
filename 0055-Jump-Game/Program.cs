@@ -7,11 +7,12 @@ namespace _0055_Jump_Game
         static void Main(string[] args)
         {
             Solution sol = new Solution();
-            Console.WriteLine("dp sol1=" + sol.CanJump(new int[] { 2, 3, 1, 1, 4 }));
-            Console.WriteLine("dp sol2=" + sol.CanJump(new int[] { 3, 2, 1, 0, 4 }));
+            //  Console.WriteLine("dp sol1=" + sol.CanJump(new int[] { 2, 3, 1, 1, 4 }));
+            //   Console.WriteLine("dp sol2=" + sol.CanJump(new int[] { 3, 2, 1, 0, 4 }));
 
-            Console.WriteLine("greedy sol1=" + sol.CanJump_Greedy(new int[] { 2, 3, 1, 1, 4 }));
-            Console.WriteLine("greedy sol2=" + sol.CanJump_Greedy(new int[] { 3, 2, 1, 0, 4 }));
+            //  Console.WriteLine("greedy sol1=" + sol.CanJump_Greedy(new int[] { 2, 3, 1, 1, 4 }));
+            // Console.WriteLine("greedy sol2=" + sol.CanJump_Greedy(new int[] { 3, 2, 1, 0, 4 }));
+             Console.WriteLine("greedy sol2=" + sol.CanJump_Greedy(new int[] {0,2,3}));
 
             Console.ReadKey();
         }
@@ -19,6 +20,15 @@ namespace _0055_Jump_Game
 
     public class Solution
     {
+        /// <summary>
+        /// dp思路
+        /// 
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        
         public bool CanJump(int[] nums)
         { 
             int[] dp = new int[nums.Length];
@@ -33,6 +43,24 @@ namespace _0055_Jump_Game
 
         public bool CanJump_Greedy(int[] nums)
         {
+            int max = 0;
+            int end = 0;
+            for (int i=0; i<nums.Length-1; i++)
+            {
+                if (max < i) break;
+
+                max = Math.Max(max, nums[i] + i);
+                if (i == end)
+                {
+                    end = max;
+                }
+            }
+            return max >= nums.Length-1 ? true : false;
+
+        }
+        /*
+        public bool CanJump_Greedy(int[] nums)
+        {
             int reach = 0;
             for (int i=0; i<nums.Length; i++)
             {
@@ -44,5 +72,6 @@ namespace _0055_Jump_Game
 
             return (reach >= nums.Length - 1) ? true : false;
         }
+        */
     }
 }

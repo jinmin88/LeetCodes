@@ -8,7 +8,7 @@ namespace _0046_Permutations
         static void Main(string[] args)
         {
             int[] nums = new int[] { 1, 2, 3 };
-            Solution sol = new Solution();
+            Solution3 sol = new Solution3();
             var result = sol.Permute(nums);
 
             Console.Write("[");
@@ -25,6 +25,47 @@ namespace _0046_Permutations
 
         }
     }
+
+    public class Solution3
+    {
+        public IList<IList<int>> Permute(int[] nums)
+        {
+            IList<IList<int>> result = new List<IList<int>>();
+            bool[] visited = new bool[nums.Length];
+            for (int i = 0; i < visited.Length; i++) visited[i] = false;
+            Backtracking(result, new List<int>(), visited, nums);
+            return result;
+        }
+
+        private void Backtracking(IList<IList<int>> result, IList<int> curr, bool[] visited, int[] nums)
+        {
+            if (curr.Count == nums.Length)
+            {
+                List<int> cloneList = new List<int>();
+                foreach (var item in curr)
+                {
+                    cloneList.Add(item);
+                }
+                result.Add(cloneList);
+                return;
+            }
+
+
+            for (int i=0; i<nums.Length; i++)
+            {
+                if (visited[i] == true) 
+                    continue;
+
+                visited[i] = true;
+                curr.Add(nums[i]);
+                Backtracking(result, curr, visited, nums);
+                visited[i] = false;
+                curr.RemoveAt(curr.Count - 1);
+            }
+        }
+
+    }
+
 
     public class Solution2
     {

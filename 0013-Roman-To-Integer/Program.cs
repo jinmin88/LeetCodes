@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace _0013_Roman_To_Integer
 {
@@ -9,6 +11,45 @@ namespace _0013_Roman_To_Integer
             Console.WriteLine("Hello World!");
         }
     }
+
+    public class Solution2
+    {
+        public int RomanToInt(string s)
+        {
+            Dictionary<char, int> map = new Dictionary<char, int> { { 'I', 1 }, { 'V', 5 }, { 'X', 10 }, { 'L', 50 }, { 'C', 100 }, { 'D', 500 }, { 'M', 1000 } };
+            int result = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                result += map[s[i]];
+                switch (s[i])
+                {
+                    case 'V':
+                    case 'X':
+                        {
+                            result += i > 0 && s[i - 1] == 'I' ? map[s[i - 1]] * -2 : 0;
+                        }
+                        break;
+                    case 'L':
+                    case 'C':
+                        {
+                            result += i > 0 && s[i - 1] == 'X' ? map[s[i - 1]] * -2 : 0;
+                        }
+                        break;
+                    case 'D':
+                    case 'M':
+                        {
+                            result += i > 0 && s[i - 1] == 'C' ? map[s[i - 1]] * -2 : 0;
+                        }
+                        break;
+                    default:
+                        break;
+               }
+            }
+            return result;
+        }
+
+    }
+
 
     //https://leetcode.com/problems/roman-to-integer/
     public class Solution

@@ -7,7 +7,6 @@ namespace _0054_Spiral_Matrix
     {
         static void Main(string[] args)
         {
-            /*
             int[,] m = new int[5, 5] {
                 { 1,   2,  3,  4,  5 },
                 { 6,   7,  8,  9, 10 },
@@ -15,9 +14,8 @@ namespace _0054_Spiral_Matrix
                 { 16, 17, 18, 19, 20 },
                 { 21, 22, 23, 24, 25 }
             };
-            */
 
-            int[,] m = new int[2, 1] { { 3 }, { 2 } };
+            //int[,] m = new int[2, 1] { { 3 }, { 2 } };
 
             for (int i = 0; i < m.GetLength(0); i++)
             {

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Collections.Generic;
 
 namespace _0014_Longest_Common_Prefix
 {
@@ -6,7 +8,43 @@ namespace _0014_Longest_Common_Prefix
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Solution2 sol = new Solution2();
+            Console.WriteLine(sol.LongestCommonPrefix(new string[] { "aa", "aaa", "aa" }));
+        }
+    }
+
+
+    public class Solution2
+    {
+        public string LongestCommonPrefix(string[] strs)
+        {
+            string prefix = strs[0];
+            if (prefix == "") return prefix;
+            for (int i=1; i<strs.Length; i++)
+            {
+                int lastPrefixIndex = -1;
+                for (int j=0; j<strs[i].Length && j<prefix.Length; j++)
+                {
+                    if (strs[i][j] == prefix[j])
+                    {
+                        lastPrefixIndex = j;
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                if (lastPrefixIndex == -1)
+                {
+                    return "";
+                }
+                else
+                {
+                    prefix = prefix.Substring(0, lastPrefixIndex + 1);
+                }
+            }
+            return prefix;
         }
     }
 
