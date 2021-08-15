@@ -109,6 +109,15 @@ namespace HeapSortr
             }
         }
 
+        private void BuildMaxHeap (int [] arr, int heapSize)
+        {
+            for (int i= (heapSize/2) - 1; i>=0; i--)
+            {
+                MaxHeapify(arr, i, heapSize);
+            }
+        }
+
+        /*
         private void BuildMaxHeap(int[] arr, int heapSize)
         {
             for (int i = (heapSize / 2) - 1; i >= 0; i--)
@@ -116,13 +125,15 @@ namespace HeapSortr
                 MaxHeapify(arr, i, heapSize);
             }
         }
+        */
 
+        /*
         private void MaxHeapify(int[] arr, int i, int heapSize)
         {
             int largestIdx;
             int l = Left(i);
             int r = Right(i);
-            
+
             if (l < heapSize && arr[l] > arr[i])
                 largestIdx = l;
             else
@@ -140,6 +151,28 @@ namespace HeapSortr
                 MaxHeapify(arr, largestIdx, heapSize);
             };
         }
+        */
+
+        private void MaxHeapify(int[] arr, int i, int heapSize)
+        {
+            int largestIndex = i;
+            int l = Left(i);
+            int r = Right(i);
+
+            if (l < heapSize && arr[l] > arr[i])
+                largestIndex = l;
+            if (r < heapSize && arr[r] > arr[largestIndex])
+                largestIndex = r;
+
+            if (largestIndex != i)
+            {
+                var temp = arr[i];
+                arr[i] = arr[largestIndex];
+                arr[largestIndex] = temp;
+                MaxHeapify(arr, largestIndex, heapSize);
+            }            
+        }
+
 
         private int Left(int i) { return 2 * i + 1; }
         private int Right(int i) { return 2 * i + 2; }
