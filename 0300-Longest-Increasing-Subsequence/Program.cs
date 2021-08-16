@@ -16,39 +16,6 @@ namespace _0300_Longest_Increasing_Subsequence
         }
     }
 
-    public class Solution
-    {
-        /// <summary>
-        /// 最長遞增子序列
-        /// dp[i] = 1 + max(dp[1],dp[2],dp[3], ... , dp[i-1])
-        /// 
-        /// 
-        /// </summary>
-        /// <param name="nums"></param>
-        /// <returns></returns>
-        public int LengthOfLIS (int[] nums)
-        {
-            int[] dp = new int[nums.Length];
-            Array.Fill(dp, 1);
-            for (int i=1; i<nums.Length; i++)
-            {
-                for (int j=0; j<i; j++)
-                {
-                    if (nums[i] > nums[j] && dp[i] < dp[j] + 1)
-                    {
-                        dp[i] = dp[j] + 1;
-                    }
-                }
-            }
-
-            int max = int.MinValue;
-            for (int i=0; i<dp.Length; i++)
-            {
-                max = Math.Max(max, dp[i]);
-            }
-            return max;
-        }
-    }
 
     public class Solution
     {
